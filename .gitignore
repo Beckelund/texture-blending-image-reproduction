@@ -4,5 +4,8 @@
 /images
 /test_images
 
+#Filtered local database
+/textures/textures.mat
+
 #Matlab files
 *.asv
