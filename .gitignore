@@ -9,3 +9,6 @@
 
 #Matlab files
 *.asv
+
+#Result images
+untitled*.*
