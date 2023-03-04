@@ -6,9 +6,12 @@ if ~exist('textures', 'var')
     disp("done")
 end
 
+%Settings
+scale = 1/16;
+
 %segment image
 image = im2double(input_image);
-image = imresize(image, 0.2, "nearest");
+image = imresize(image, scale, "bicubic");
 
 
 %Replace each color with texture id
@@ -28,7 +31,7 @@ end
 close(f)
 clear f
 
-id_map = imresize(id_map, 1/0.2, "nearest");
+id_map = imresize(id_map, 1/scale, "nearest");
 
 % Recreate input image with textures
 f = waitbar(0,'step 3');
