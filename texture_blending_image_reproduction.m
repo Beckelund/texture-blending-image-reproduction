@@ -1,13 +1,14 @@
-function [output] = texture_blending_image_reproduction(input_image)
+function [output] = texture_blending_image_reproduction(input_image, textures)
 
-if ~exist('textures', 'var')
-    disp("Textures not loaded, loading textures...")
-    load("textures\textures.mat");
-    disp("done")
-end
+
+%if ~exist('textures', 'var')
+%    disp("Textures not loaded, loading textures...")
+%    load("textures\textures.mat");
+%    disp("done")
+%end
 
 %Settings
-scale = 1/16;
+scale = 1/128;
 
 %segment image
 image = im2double(input_image);
